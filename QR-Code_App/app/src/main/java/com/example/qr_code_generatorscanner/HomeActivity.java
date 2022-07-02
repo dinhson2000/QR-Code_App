@@ -9,8 +9,8 @@ import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private Button generateQRButton;
-    private Button scanQRButton;
+    private Button generateQRButton, gallaleyBtn;
+    private Button scanQRButton, historybtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,8 @@ public class HomeActivity extends AppCompatActivity {
 
         generateQRButton = findViewById(R.id.QRCodeGeneratorBtn);
         scanQRButton = findViewById(R.id.QRCodeScannerBtn);
+        gallaleyBtn = findViewById(R.id.QRCodeLibraryBtn);
+        historybtn  = findViewById(R.id.HistoryBtn);
 
         generateQRButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,21 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        gallaleyBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, ScanFromLibraActivity.class);
+                startActivity(intent);
 
+            }
+        });
+        historybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, HistoryActivity.class);
+                startActivity(intent);
+            }
+        });
     }
+
 }

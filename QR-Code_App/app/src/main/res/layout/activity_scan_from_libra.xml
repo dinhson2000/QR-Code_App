@@ -10,30 +10,19 @@
     tools:context=".GenerateQRCodeActivity">
 
     <FrameLayout
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:id="@+id/frame"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp">
 
-        <TextView
-            android:id="@+id/frameText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Your Code Will Appear Here"
-            android:textColor="@color/black"
-            android:textAllCaps="false"
-            android:textAlignment="center"
-            android:elevation="1dp"
-            android:padding="4dp"
-            android:textSize="15dp"/>
 
         <ImageView
-            android:id="@+id/QRCodeImg"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:background="@color/white" />
+            android:id="@+id/SelectImg"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:background="@drawable/add"
+            android:scaleType="fitXY" />
 
     </FrameLayout>
 
@@ -47,12 +36,12 @@
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
         android:padding="5dp"
-        android:hint="Add text to get QR Code"
+        android:hint="Your QR code"
         android:textColorHint="@color/white"
         app:hintTextColor="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputData"
+            android:id="@+id/outData"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:ems="10"
@@ -65,7 +54,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/QRCodeGeneratorBtn"
+        android:id="@+id/btnGotoLink"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textInputLayout"
@@ -73,18 +62,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/button_back"
-        android:text="Generate QR Code"
-        android:textAllCaps="false" />
-    <Button
-        android:id="@+id/SaveImagetoLibBtn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/QRCodeGeneratorBtn"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/button_back"
-        android:text="Save image QRcode"
+        android:text="Go to link"
         android:textAllCaps="false" />
 
 </RelativeLayout>

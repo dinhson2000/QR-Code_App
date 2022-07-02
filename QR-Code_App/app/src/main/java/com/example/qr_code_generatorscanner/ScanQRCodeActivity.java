@@ -29,6 +29,7 @@ public class ScanQRCodeActivity extends AppCompatActivity {
 
         scannerLiveView = findViewById(R.id.camView);
         scannedTextView = findViewById(R.id.scannedData);
+        DataSharePreferences dataSharePreferences = new DataSharePreferences(this);
 
         if(checkPermission()){
             Toast.makeText(this, "Permission Granted..",Toast.LENGTH_SHORT).show();
@@ -55,6 +56,7 @@ public class ScanQRCodeActivity extends AppCompatActivity {
             @Override
             public void onCodeScanned(String data) {
                 scannedTextView.setText(data);
+                dataSharePreferences.addData("SCA " + data);
             }
         });
 

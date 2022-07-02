@@ -47,13 +47,35 @@
         android:id="@+id/QRCodeScannerBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="Scan QR Code"
-        android:textAllCaps="false"
         android:layout_below="@+id/QRCodeGeneratorBtn"
-        android:background="@drawable/button_back" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_back"
+        android:text="Scan QR Code"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/QRCodeLibraryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/QRCodeScannerBtn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_back"
+        android:text="QR Code from Library"
+        android:textAllCaps="false" />
+    <Button
+        android:id="@+id/HistoryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/QRCodeLibraryBtn"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_back"
+        android:text="History"
+        android:textAllCaps="false" />
 
 
 </RelativeLayout>
